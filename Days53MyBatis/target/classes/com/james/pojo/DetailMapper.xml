@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.james.pojo.DetailMapper">
+	<select id="getDetailsByOid" resultMap="detailMap">
+		select * from details where oid = #{oid}
+	</select>
+	
+	<resultMap type="com.james.pojo.Details" id="detailMap">
+		<id column="did" property="did" />
+		<association property="pro" column="pid" select="com.james.pojo.ProductMapper.getProductByPid"></association>
+	</resultMap>
+</mapper>

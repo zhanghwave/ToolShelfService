@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.james.pojo.OrderMapper">
+	<select id="getAllOrders" resultMap="orderMap">
+		select * from orders
+	</select>
+	
+	<resultMap type="com.james.pojo.Orders" id="orderMap">
+	
+		<!-- id代表主键的设置 -->
+		<id column="oid" property="oid" />
+		
+		<!-- result代表普通的字段和属性的映射关系 -->
+		<result column="odescr" property="odescr" />
+		<result column="orderdate" property="orderdate" />
+		
+		<association property="users" column="uid" select="com.james.pojo.UserMapper.getUserByUid"></association>
+		
+		<collection property="details" column="oid" select="com.james.pojo.DetailMapper.getDetailsByOid" ofType="com.james.pojo.Details"></collection>
+	</resultMap>
+	
+	<!-- <select id="getUserByUid" resultType="com.james.pojo.Users">
+		select * from users where uid = #{uid}
+	</select> -->
+</mapper>
