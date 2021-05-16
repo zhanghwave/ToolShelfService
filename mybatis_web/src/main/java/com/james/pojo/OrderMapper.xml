@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.james.pojo.OrderMapper">
-	<select id="getAllOrders" resultMap="orderMap">
+	<!--<select id="getAllOrders" resultMap="orderMap">
 		select * from orders
-	</select>
+	</select>-->
 	
 	<resultMap type="com.james.pojo.Orders" id="orderMap">
 	

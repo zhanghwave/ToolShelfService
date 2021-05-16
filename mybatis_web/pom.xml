@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.james</groupId>
-  <artifactId>MyBatisTest</artifactId>
+  <artifactId>mybatis_web</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>MyBatisTest</name>
+  <name>mybatis_web</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

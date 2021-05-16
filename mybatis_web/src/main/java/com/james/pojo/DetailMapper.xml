@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.james.pojo.DetailMapper">
-	<select id="getDetailsByOid" resultMap="detailMap">
+	<!--<select id="getDetailsByOid" resultMap="detailMap">
 		select * from details where oid = #{oid}
-	</select>
+	</select>-->
 	
 	<resultMap type="com.james.pojo.Details" id="detailMap">
 		<id column="did" property="did" />

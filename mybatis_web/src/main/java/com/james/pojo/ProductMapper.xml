@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.james.pojo.ProductMapper">
-	<select id="getProductByPid" resultMap="productMap">
+	<!--<select id="getProductByPid" resultMap="productMap">
 		select * from products where pid = #{pid}
-	</select>
+	</select>-->
 	
 	<resultMap type="com.james.pojo.Products" id="productMap">
 		<id column="pid" property="pid" />

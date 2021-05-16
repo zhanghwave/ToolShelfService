@@ -2,9 +2,8 @@ package com.springboot.mapper;
 
 import com.springboot.pojo.Course;
 import com.springboot.pojo.CourseExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface CourseMapper {
     long countByExample(CourseExample example);
