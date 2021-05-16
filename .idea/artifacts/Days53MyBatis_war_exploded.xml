@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Days53MyBatis:war exploded">
+    <output-path>$PROJECT_DIR$/MyBatisTest/target/Days53MyBatis</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>Days53MyBatis</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Days53MyBatis" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.4.4" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.44" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/MyBatisTest/target/Days53MyBatis/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Days53MyBatis/web/Web" />
+    </root>
+  </artifact>
+</component>
