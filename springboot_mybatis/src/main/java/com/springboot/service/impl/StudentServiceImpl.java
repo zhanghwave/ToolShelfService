@@ -2,9 +2,12 @@ package com.springboot.service.impl;
 
 import com.springboot.mapper.StudentMapper;
 import com.springboot.pojo.Student;
+import com.springboot.pojo.StudentExample;
 import com.springboot.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @program: myspring
@@ -23,5 +26,10 @@ public class StudentServiceImpl implements StudentService {
     public Student getStudentById(String id) {
         System.out.println("---");
         return studentMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<Student> selectByExample(StudentExample studentExample) {
+        return studentMapper.selectByExample(studentExample);
     }
 }
