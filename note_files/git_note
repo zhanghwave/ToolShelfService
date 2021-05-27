@@ -21,6 +21,8 @@ git help [command]
 
 生成ssh.key:
 ssh-keygen -t rsa -C "2446734662@qq.com"
+配置多个用户的密钥
+ssh-keygen -t rsa -C "2email@github.com" -f ~/.ssh/github_rsa
 
 提交代码：
 git clone [url] ==> vi [file] ==> git add [file] / git add .  ==> git commit -m "first commit"  ==> git push 
