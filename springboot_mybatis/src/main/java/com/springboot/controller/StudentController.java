@@ -3,7 +3,8 @@ package com.springboot.controller;
 import com.springboot.pojo.Student;
 import com.springboot.pojo.StudentExample;
 import com.springboot.service.StudentService;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,8 +22,8 @@ import java.util.List;
 @RequestMapping(value = "/student")
 public class StudentController {
 
-    Logger logger = Logger.getLogger(StudentController.class);
     private static final String INDEX_PAGE = "index";
+    private static Logger log = LoggerFactory.getLogger(StudentController.class);
 
     @Autowired
     StudentService studentService;
@@ -42,7 +43,7 @@ public class StudentController {
        criteria.andSnameIsNotNull();
        studentExample.setDistinct(true);
        List<Student> students = studentService.selectByExample(studentExample);
-       logger.debug(students.toString());
+       log.debug(students.toString());
        return students;
    }
 

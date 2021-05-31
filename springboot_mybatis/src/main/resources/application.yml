@@ -56,4 +56,4 @@ mybatis:
 # 日志级别
 logging:
   level:
-    root: info
+    root: debug
