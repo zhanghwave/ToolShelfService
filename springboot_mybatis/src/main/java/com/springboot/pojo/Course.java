@@ -9,6 +9,15 @@ public class Course {
 
     private Integer semester;
 
+    public Course() {
+    }
+
+    public Course(String cno, String cname, Integer credit) {
+        this.cno = cno;
+        this.cname = cname;
+        this.credit = credit;
+    }
+
     public String getCno() {
         return cno;
     }
@@ -39,5 +48,11 @@ public class Course {
 
     public void setSemester(Integer semester) {
         this.semester = semester;
+    }
+
+    public static class CourseFactory{
+        public static Course getCourse(String param01, String param02, Integer param03){
+            return new Course(param01, param02, param03);
+        }
     }
 }
