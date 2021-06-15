@@ -31,6 +31,6 @@
         <!--property为单标签-->
         <property name="cno" value="C002"/>
         <property name="cname"  value="大学英语"/>
-        <property name="credit"  value="3"></property>
+        <property name="credit"  value="3"/>
     </bean>
 </beans>
